@@ -109,7 +109,7 @@ public class Inicial {
 			frame = new JFrame();
 			frame.getContentPane().setForeground(Color.BLACK);
 			frame.setBackground(Color.DARK_GRAY);
-			frame.getContentPane().setBackground(Color.MAGENTA);
+			frame.getContentPane().setBackground(Color.cyan);
 			SpringLayout springLayout = new SpringLayout();
 			frame.getContentPane().setLayout(springLayout);
 			
@@ -127,12 +127,12 @@ public class Inicial {
 			lblNome.setForeground(Color.BLACK);
 			frame.getContentPane().add(lblNome);
 			
-			txtNome = new JTextField();
-			springLayout.putConstraint(SpringLayout.NORTH, txtNome, 0, SpringLayout.NORTH, lblNome);
-			springLayout.putConstraint(SpringLayout.WEST, txtNome, 6, SpringLayout.EAST, lblNome);
-			springLayout.putConstraint(SpringLayout.EAST, txtNome, 190, SpringLayout.EAST, lblNome);
-			frame.getContentPane().add(txtNome);
-			txtNome.setColumns(10);
+			txtRua = new JTextField();
+			springLayout.putConstraint(SpringLayout.NORTH, txtNome, 0, SpringLayout.NORTH, lblRua);
+			springLayout.putConstraint(SpringLayout.WEST, txtNome, 6, SpringLayout.EAST, lblRua);
+			springLayout.putConstraint(SpringLayout.EAST, txtNome, 190, SpringLayout.EAST, frame.getContentPane());
+			txtRua.setColumns(10);
+			
 			
 			JLabel lblRua = new JLabel("Rua");
 			springLayout.putConstraint(SpringLayout.NORTH, lblRua, 20, SpringLayout.SOUTH, lbTitle);
@@ -142,7 +142,7 @@ public class Inicial {
 			frame.getContentPane().add(lblRua);
 			
 			txtRua = new JTextField();
-			springLayout.putConstraint(SpringLayout.NORTH, txtRua, 0, SpringLayout.NORTH, lblRua);
+			springLayout.putConstraint(SpringLayout.NORTH, lblNome, 20, SpringLayout.SOUTH, lblRua);
 			springLayout.putConstraint(SpringLayout.WEST, txtRua, 6, SpringLayout.EAST, lblRua);
 			springLayout.putConstraint(SpringLayout.EAST, txtRua, -12, SpringLayout.EAST, frame.getContentPane());
 			txtRua.setColumns(10);
